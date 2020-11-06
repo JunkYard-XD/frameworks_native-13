@@ -2597,7 +2597,7 @@ void SurfaceFlinger::postComposition() {
     mTimeStats->recordDisplayEventConnectionCount(sfConnections + appConnections);
 
     if (isDisplayConnected && !display->isPoweredOn()) {
-        getRenderEngine().cleanupPostRender();
+        // getRenderEngine().cleanupPostRender();
         return;
     }
 
@@ -2617,7 +2617,7 @@ void SurfaceFlinger::postComposition() {
     getBE().mLastSwapTime = currentTime;
 
     // Cleanup any outstanding resources due to rendering a prior frame.
-    getRenderEngine().cleanupPostRender();
+    // getRenderEngine().cleanupPostRender();
 
     {
         std::lock_guard lock(mTexturePoolMutex);
