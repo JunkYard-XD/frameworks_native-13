@@ -205,6 +205,8 @@ cc_library {
         misc_undefined: ["integer"],
     },
 
+    whole_program_vtables: true, // Requires ThinLTO
+
     tidy: true,
     tidy_flags: [
         // Only check our headers
