@@ -18,6 +18,7 @@ cc_defaults {
         "-Wunused",
         "-Wunreachable-code",
         "-Wconversion",
+        "-O3",
     ],
 }
 
