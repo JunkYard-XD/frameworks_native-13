@@ -137,7 +137,7 @@ int main(int, char**) {
 
     setpriority(PRIO_PROCESS, 0, PRIORITY_URGENT_DISPLAY);
 
-    set_sched_policy(0, SP_FOREGROUND);
+    set_sched_policy(0, SP_TOP_APP);
 
     // Put most SurfaceFlinger threads in the system-background cpuset
     // Keeps us from unnecessarily using big cores
