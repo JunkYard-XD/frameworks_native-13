@@ -267,7 +267,7 @@ EventThread::EventThread(std::unique_ptr<VSyncSource> vsyncSource,
         ALOGE("Couldn't set SCHED_FIFO for EventThread");
     }
 
-    set_sched_policy(tid, SP_FOREGROUND);
+    set_sched_policy(tid, SP_TOP_APP);
 }
 
 EventThread::~EventThread() {
